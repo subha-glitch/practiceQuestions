@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      int i, j;
+      int n=5;
+      for(i=1;i<=n;i++){
+        for(j=1;j<=n;j++){
+          
+          if(i==1|i==5|j==1|j==n){
+             System.out.print(i);
+          }
+          
+          else{
+            System.out.print(" ");
+          }
+           
+        
+        }
+         System.out.println("");
+      }
+     
+      
+  }
+}
+
+/*
+Output:
+
+Hello, World!
+11111
+2   2
+3   3
+4   4
+55555
+
+*/
