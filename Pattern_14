@@ -7,12 +7,12 @@ public class Main {
       for(int i=1;i<=5;i++){
         for(int j=1;j<=5;j++){
           if(j==1||i==n|j==i){
-            System.out.print(count+ " ");
+            System.out.print(count+ "  ");
             count++;
           }
         
           else{
-            System.out.print("  ");
+            System.out.print("    ");
           }
       }
       
@@ -26,9 +26,11 @@ public class Main {
 /*
 Output:
 
-1         
-2 3       
-4   5     
-6     7   
-8 9 10 11 12 
+Output:
+
+1                  
+2  3              
+4      5          
+6          7      
+8  9  10  11  12 
 */
