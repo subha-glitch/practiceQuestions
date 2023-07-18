@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int n=5;
+      int count=1;
+      for(int i=1;i<=5;i++){
+        for(int j=1;j<=5;j++){
+          if(j==1||i==n|j==i){
+            System.out.print(count+ "  ");
+            
+          }
+        
+          else{
+            System.out.print("    ");
+          }
+          count++;
+      }
+      
+       System.out.println("");
+  }
+ 
+}
+
+}
+
+/*Output:
+
+1                  
+6  7              
+11      13          
+16          19      
+21  22  23  24  25  
+
+*/
