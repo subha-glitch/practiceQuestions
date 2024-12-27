@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    /*
+	    Given an array of numbers, for each position i, calculate the product of all elements in the array EXCEPT the element at position i.
+        For example, with input array [2, 2, 3, 5]:
+
+        For index 0: product would be 2 × 3 × 5 = 30
+        For index 1: product would be 2 × 3 × 5 = 30
+        For index 2: product would be 2 × 2 × 5 = 20
+        For index 3: product would be 2 × 2 × 3 = 12*/
+
+    int [] arr = {2, 2, 3, 5};
+    int product = 1;
+    int [] res = new int[arr.length];
+    
+    for(int i = 0 ; i< arr.length; i++){
+        product = product*arr[i];
+    }
+    
+    
+    for(int i = 0 ; i< arr.length; i++){
+        res[i]= product/arr[i];
+        System.out.println("resultant array"+ res[i]);
+    }
+    System.out.println(product);
+    
+}
