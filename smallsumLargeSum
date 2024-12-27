@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		/*Given an array of 𝑛n integers, calculate the sum of
+		n−1 elements in two scenarios:
+
+    Exclude the largest element to find the smallest sum.
+    Exclude the smallest element to find the largest sum.
+    Print both the smallest sum and the largest sum.*/
+    int [] arr = {2, 4, 7, 9, 3, 5};
+    int max = Integer.MIN_VALUE;
+    int min = Integer.MAX_VALUE;
+    int sum = 0;
+    
+    for(int i = 0 ; i< arr.length;i++){
+        if(arr[i]>max){
+           
+            max = arr[i];
+        }
+        
+        else if (arr[i]<min){
+            min = arr[i];
+        }
+        sum = sum+arr[i];
+    }
+    
+    System.out.println(max);
+    System.out.println(min);
+    System.out.println(sum);
+
+    System.out.println("largest sum " + (sum- min));
+    System.out.println("smallest sum " + (sum- max));
+
+    
+    
+	}
+	
+	
+	
+}
