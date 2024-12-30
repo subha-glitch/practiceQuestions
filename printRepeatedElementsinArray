@@ -40,10 +40,11 @@ class Codechef
             else {
                    
                 temp = arr[i];
-                count = 1;
-                if (count > 0) {
+                
+                if (count > 1) {
                     System.out.println("repeated elements" + temp);
                 } 
+                    count = 1;
             }
           
 
