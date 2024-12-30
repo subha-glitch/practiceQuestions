@@ -1,56 +1,26 @@
-/*Print the repeated elements in the Array*/
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class Codechef
-{
-    public static void main(String[] args) throws java.lang.Exception
-    {
-
-        int[] arr = {
-            2,
-            2,
-            3,
-            3,
-            4,
-            4,
-            4,
-            6,
-            6,
-            6,
-            7
-        };
-
-
-
-        findRepeatingElementCount(arr);
-
+public static void findRepeatingElementCount(int[] arr) {
+    if (arr == null || arr.length == 0) {
+        System.out.println("Array is empty or null.");
+        return;
     }
 
-    public static void findRepeatingElementCount(int[] arr) {
+    int count = 1; // Initialize count for the first element
+    int currentElement = arr[0]; // Start with the first element
 
-        int count = 1;
-        int temp = arr[0];
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] == arr[i + 1]) {
-                count++;
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] == currentElement) {
+            count++; // Increment count if the current element repeats
+        } else {
+            if (count > 1) {
+                System.out.println("Element " + currentElement + " is repeated " + count + " times.");
             }
-            else {
-                   
-                temp = arr[i];
-                
-                if (count > 1) {
-                    System.out.println("repeated elements" + temp);
-                } 
-                    count = 1;
-            }
-          
-
+            currentElement = arr[i]; // Move to the next unique element
+            count = 1; // Reset count
         }
-        
-
     }
 
+    // Check for the last element in the array
+    if (count > 1) {
+        System.out.println("Element " + currentElement + " is repeated " + count + " times.");
+    }
 }
