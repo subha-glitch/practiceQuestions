@@ -1,0 +1,74 @@
+/*Find the  count of the repeating elements of the array.*/
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+
+        int[] arr = {
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            7
+        };
+        
+        int temp = arr[0];
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == temp) {
+                count++;
+            }
+            else {
+                System.out.println("count of" + temp + "is" + count);
+                temp = arr[i];
+                count = 1;
+            }
+        }
+        System.out.println("count of" + temp + "is" + count);
+        
+        findRepeatingElementCount();
+
+    }
+    
+    public static void findRepeatingElementCount(){
+        int[] arr = {
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            7
+        };
+        int count =1;
+        for (int i =0; i< arr.length-1;i++ ){
+            if(arr[i] == arr[i+1]){
+                count++;
+            }
+            else{
+                System.out.println("Count of "+ arr[i]+ "is"+ count);
+                count =1;
+            }
+            
+        } 
+        
+         System.out.println("Count of "+ arr[(arr.length-1)] + "is"+ count);
+        
+    }
