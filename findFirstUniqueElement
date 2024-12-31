@@ -1,0 +1,31 @@
+public static void findFirstUniqueElement(int[] arr) {
+    int count = 1; // To track the frequency of elements
+
+    // Iterate through the array
+    for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] == arr[i + 1]) {
+            count++; // Increment count if the current element is repeated
+        } else {
+            // Check if the current element is unique
+            if (count == 1) {
+                System.out.println("First non-repeating element: " + arr[i]);
+                return; // Exit after finding the first non-repeating element
+            }
+            count = 1; // Reset count for the next group of elements
+        }
+    }
+
+    // Check the last element of the array
+    if (count == 1) {
+        System.out.println("First non-repeating element: " + arr[arr.length - 1]);
+        return;
+    }
+
+    // If no unique element is found
+    System.out.println("No non-repeating elements found.");
+}
+
+public static void main(String[] args) {
+    int[] array = {2, 3, 5, 5, 6, 6, 8, 6, 9, 1, 1, 1};
+    findFirstUniqueElement(array);
+}
