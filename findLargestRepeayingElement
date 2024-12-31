@@ -1,0 +1,39 @@
+/*Find the largest repeating element*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+
+        int[] arr = {
+            2,
+            3,
+            4,
+            4,
+            4,
+            5,
+            6,
+            6,
+            6,
+            6,
+            7, 8, 8, 9, 9, 9, 9, 11, 12 ,12
+        };
+         findLargestRepeayingElement(arr);
+
+    }
+
+   public static void findLargestRepeayingElement(int[] arr) {
+      int [] result = new int[arr.length];
+      for(int i = arr.length-1; i > 0; i--){
+          if(arr[i]== arr[i-1]){
+             System.out.println(arr[i]);
+             return;
+          }
+      }
+    }
+
+}
