@@ -1,0 +1,25 @@
+//Given an array of element and  value , print the pair whose difference is k 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		int [] arr = {5,2, 3, 4, 1};
+		int k = 2;
+		
+	    for (int i =0 ; i < arr.length-1 ; i++ ){
+	        for(int j =i+1 ; j< arr.length ; j++){
+	            if(arr[i]-arr[j]==k )
+	            {
+	                System.out.printf("%d, %d%n", arr[i], arr[j]);
+	            }
+	            
+	        }
+	    } 
+
+	}
+}
