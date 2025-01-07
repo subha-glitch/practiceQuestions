@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        int[] ar1 = {3, 5, 7, 9, 11};
+        int[] ar2 = {1, 2, 3, 4, 9, 15, 17, 19};
+        int k = 0;
+        int i = 0, j = 0;
+        int[] result = new int[ar1.length + ar2.length];
+
+        // Merge arrays until one of them is exhausted
+        while (i < ar1.length && j < ar2.length) {
+            if (ar2[j] <= ar1[i]) {
+                result[k++] = ar2[j++];
+            } else {
+                result[k++] = ar1[i++];
+            }
+        }
+
+        // Add remaining elements from ar1
+        while (i < ar1.length) {
+            result[k++] = ar1[i++];
+        }
+
+        // Add remaining elements from ar2
+        while (j < ar2.length) {
+            result[k++] = ar2[j++];
+        }
+
+        // Print the merged sorted array
+        for (int l = 0; l < result.length; l++) {
+            System.out.println(result[l]);
+        }
+    }
+}
