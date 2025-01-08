@@ -1,0 +1,63 @@
+
+
+
+import java.util.Arrays;
+
+public class OddEvenShift {
+    public static void main(String[] args) {
+        int[] arr = {12, 3, 5, 8, 7, 10, 1, 4};
+        System.out.println("Original Array: " + Arrays.toString(arr));
+        
+        rearrangeOddEvenInPlace(arr);
+        System.out.println("Rearranged Array: " + Arrays.toString(arr));
+    }
+
+    public static void rearrangeOddEvenInPlace(int[] arr) {
+        int index = 0; // Keeps track of the next position for odd numbers
+        
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) { // If the number is odd
+                // Swap arr[i] with arr[index]
+                int temp = arr[i];
+                arr[i] = arr[index];
+                arr[index] = temp;
+                index++;
+            }
+        }
+    }
+}
+
+//2nd way 
+
+import java.util.Arrays;
+
+public class OddEvenShift {
+    public static void main(String[] args) {
+        int[] arr = {12, 3, 5, 8, 7, 10, 1, 4};
+        System.out.println("Original Array: " + Arrays.toString(arr));
+        
+        int[] rearranged = rearrangeOddEvenUsingFor(arr);
+        System.out.println("Rearranged Array: " + Arrays.toString(rearranged));
+    }
+
+    public static int[] rearrangeOddEvenUsingFor(int[] arr) {
+        int[] result = new int[arr.length];
+        int left = 0;
+        int right = arr.length - 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 != 0) {
+                // Odd numbers go to the left
+                result[left++] = arr[i];
+            } else {
+                // Even numbers go to the right
+                result[right--] = arr[i];
+            }
+        }
+
+        return result;
+    }
+}
+
+
+
