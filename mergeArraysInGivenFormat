@@ -1,0 +1,48 @@
+/ * Merge the give arrays in the given format          
+int[] a = {3,4,5};
+int[] b = {5,6,7,9};
+int[] c = {8,9,10,11};
+
+Your Output
+3 5 8 4 6 9 5 7 10 9 11 */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        // your code goes here
+        int[] a = {3,4,5};
+        int[] b = {5,6,7,9};
+        int[] c = {8,9,10,11};
+        int[] res = new int[a.length + b.length + c.length];
+        int k = 0;
+        int i = 0;
+        
+        while (k <res.length){
+                if (i<a.length) {
+                res[k++] = a[i];
+                }
+
+                if (i<b.length) {
+                res[k++] = b[i];
+                }
+    
+                if(i<c.length){
+                res[k++] = c[i];
+                }
+            i++;
+            }
+            
+             for (int l = 0; l < res.length; l++) {
+            System.out.println(res[l]);
+             }
+
+    
+
+       
+    }
+}
