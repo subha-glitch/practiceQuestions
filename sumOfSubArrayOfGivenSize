@@ -1,0 +1,26 @@
+/*Sum of the given Sub array of size 4*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        // your code goes here 
+        int [] arr = {3,5,1,2,0,1,2,1,2,3,5};
+        int sum = 0; 
+        int size = 4;
+        int startIndex = 0;
+        int endIndex = 0;
+        for(int i =0 ; i<=arr.length-size;i++){
+            sum =0;
+            for(int j = i ; j<size+i;j++){
+                sum = sum+arr[j];
+            }
+            System.out.println(sum);
+        }                
+
+    }
+}
