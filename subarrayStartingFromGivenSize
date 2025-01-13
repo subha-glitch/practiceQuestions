@@ -1,0 +1,33 @@
+/*3512
+35120
+351201
+3512012
+35120121
+351201212
+3512012123
+35120121235*/
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        // your code goes here 
+        int [] arr = {3,5,1,2,0,1,2,1,2,3,5};
+        int sum = 0; 
+        int size = 4;
+        int startIndex = 0;
+        int endIndex = 0;
+        for(int i =0 ; i<=arr.length-size;i++){
+            for(int j = 0 ; j<size+i;j++){
+                System.out.print(arr[j]);
+            }
+            System.out.println("");
+        }                
+
+    }
+}
