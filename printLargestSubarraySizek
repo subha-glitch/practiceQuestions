@@ -1,0 +1,50 @@
+/* print largest subarray of sizes k*/
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main(String[] args) throws java.lang.Exception
+    {
+        // your code goes here 
+        int[] arr = {
+            3,
+            5,
+            1,
+            7,
+            2
+        };
+        int size = 0;
+        int k = 9;
+
+        //use while or use another for loop
+        printSubArrays(arr,k);
+    }
+
+    static void printSubArrays(int[] arr, int k) {
+        int sum;
+        
+    for (int size = arr.length; size >0; size--){//to change the size
+        for (int i = 0; i <= arr.length - size; i++)
+        {   sum=0;
+            for (int j = i; j < i + size; j++) {
+               // System.out.print(arr[j] + " ");
+                sum+=arr[j];
+                }
+                //System.out.println(sum);
+                
+                if(sum==k){
+                    for(int p =i ; p<i+size ;p++){
+                        System.out.print(arr[p]);
+            
+                    }
+                    System.out.println("");
+                    return;
+                } 
+            }
+        }
+    }
+        
+}
