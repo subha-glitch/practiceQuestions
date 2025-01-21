@@ -1,0 +1,33 @@
+/*arrange the o's to the right */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		int [] arr = {3,7, 0,4,0,6,0,8,0,3};
+		int i =0; 
+	    int j =0;
+		while(j<arr.length){
+		    if(arr[j] == 0){
+		    j++;
+		}
+		else{
+		    arr[i++] = arr[j++];
+		}
+		}
+		
+		while(i<arr.length){
+		    arr[i] = 0;
+		    i++;
+		}
+		for (int k =0 ; k<=arr.length ;k++ ){
+		    System.out.println(arr[k]);
+		} 
+        
+	}
+}
