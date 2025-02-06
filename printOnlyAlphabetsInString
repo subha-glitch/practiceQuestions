@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s = "hel!@123dsfsdfdsf";
+		String res = "";
+		for(int i =0 ; i<s.length()-1;i++){
+		    char ch = s.charAt(i);
+                if((ch>='a' && ch<='z')||(ch>='A' && ch<='Z')){
+                    {
+                            res+=ch; 
+                    }
+               
+                }
+            }
+            
+            System.out.println(res);
+
+	}
+}
