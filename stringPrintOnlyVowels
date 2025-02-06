@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s = "Subhashini$#$$#@#$6564563";
+		String res = "";
+		for(int i =0 ; i<s.length();i++){
+		    char ch = s.charAt(i);
+                if((ch>='a' && ch<='z')||(ch>='A' && ch<='Z')){
+                    if(ch=='a' ||ch == 'e' || ch == 'i' || ch=='o'|| ch =='u' ||
+                    ch=='A' ||ch == 'E' || ch == 'I' || ch=='O'|| ch =='U')
+                    {
+                            res+=ch; 
+                    }
+               
+                }
+            }
+            
+            System.out.println(res);
+
+	}
+}
