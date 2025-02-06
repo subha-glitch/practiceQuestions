@@ -1,0 +1,76 @@
+import java.util.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        String s = "HWORLDello12@$";
+        
+        StringBuilder uppercase = new StringBuilder();
+        StringBuilder lowercase = new StringBuilder();
+        StringBuilder specialChars = new StringBuilder();
+        int numSum = 0;
+        
+        for (char ch : s.toCharArray()) {
+            if (Character.isUpperCase(ch)) {
+                uppercase.append(ch);
+            } else if (Character.isLowerCase(ch)) {
+                lowercase.append(ch);
+            } else if (Character.isDigit(ch)) {
+                numSum += Character.getNumericValue(ch);
+            } else {
+                specialChars.append(ch);
+            }
+        }
+        
+        // Print grouped characters
+        System.out.println("Uppercase: " + uppercase);
+        System.out.println("Lowercase: " + lowercase);
+        System.out.println("Sum of Numbers: " + numSum);
+        System.out.println("Special Characters: " + specialChars);
+        
+        // Final grouped output
+        System.out.println(uppercase.toString() + lowercase.toString() + numSum + specialChars.toString());
+    }
+}
+
+// instead of String builder we can use
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s = "Hello@5$WORLD7";
+		int numSum = 0;
+		String alphaCaps = "";
+		String alphasmall = ""; 
+		String special ="";
+		for(int i =0 ; i<s.length();i++){
+		    char ch = s.charAt(i);
+    
+                    if((ch>='A' && ch<='Z'))
+                    {
+                            alphaCaps+=ch; 
+                    }
+                    
+                    else if((ch>='a'&& ch<='z') ){
+                            alphasmall+=ch;
+                    }
+                        else if(ch>='0' && ch<='9'){
+                        numSum=numSum+ch-48;
+                    }
+                    
+                    else{
+                        special = special+ch;
+                    }                
+                    
+            }
+            
+        System.out.println((numSum==0? alphaCaps+alphasmall:alphaCaps+alphasmall+numSum+special));
+        
+        
+	}
+	
