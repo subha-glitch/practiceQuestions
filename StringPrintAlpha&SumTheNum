@@ -1,0 +1,22 @@
+//*Print the alpahbets and sum of number*/
+
+import java.util.*;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        String s = "Subha3sh5in7i";
+        int numSum = 0;
+        StringBuilder alpha = new StringBuilder();
+        
+        for (char ch : s.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                alpha.append(ch);
+            } else if (Character.isDigit(ch)) {
+                numSum += Character.getNumericValue(ch);
+            }
+        }
+        
+        System.out.println(alpha.toString() + numSum);
+        System.out.println(numSum);
+    }
+}
