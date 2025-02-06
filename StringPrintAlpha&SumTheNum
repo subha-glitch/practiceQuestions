@@ -31,7 +31,7 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
-		String s = "Subha3sh5in7i";
+		String s = "Subha$sh)in*i";
 		int numSum = 0;
 		String alpha = "";
 		for(int i =0 ; i<s.length();i++){
@@ -47,8 +47,9 @@ class Codechef
                     }
             }
             
-        System.out.println(alpha+numSum);
+        System.out.println((numSum==0? alpha:alpha+numSum) );
         
-        System.out.println(numSum);
 	}
+}
+
 }
