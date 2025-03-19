@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// replace uppercase char with 1$2
+		String s = "HeLlo";
+        char [] a = s.toCharArray();
+        String newS = "";
+        
+        for(char val : a){
+            if(Character.isUpperCase(val)){
+                newS+="1$2";
+            }
+            else{
+                newS+=val;
+            }
+        }
+        System.out.println(newS);
+	}
+}
