@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s = "banana";
+		char [] a = s.toCharArray();
+		String b = "";
+		for(char val:a){
+		    if(val=='a'){
+		        b+="*"+val;
+		    }
+		    else{
+		        b+=val;
+		    }
+		}
+		System.out.println(b);
+
+	}
+}
