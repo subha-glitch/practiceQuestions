@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		String s = "hereiamstackerrank";
+		String t = "hackerrank";
+		char [] same = new char[t.length()];
+		int count =0, i=0, j=0;
+		while(i<s.length() && j <t.length()){
+		    if(t.charAt(j)==s.charAt(i)){
+		        same[j]= s.charAt(i);
+		        i++;
+		        j++;
+		        
+		    }
+		    else{
+		        i++;
+		    }
+
+		}
+		System.out.println(same);
+        String res = new String(same);
+        if(res.equals(t)){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        
+    	}
+}
