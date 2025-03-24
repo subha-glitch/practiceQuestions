@@ -1,0 +1,48 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+
+		String a = "India is my country";
+	  // country my is India
+	    String t = reverseWord(a);
+	    System.out.println(t);
+	    
+	}
+    
+    static String reverseWord(String a){
+        String p = "";
+        String word = "" ;
+        for(int i=a.length()-1 ; i>=0;i--){
+
+            if (a.charAt(i)!=' '){
+                word+=a.charAt(i);
+
+            }
+            else{
+                p+=revString(word)+ " ";
+                word = "";
+                
+            }
+              
+        }
+        
+        if(word.length()>0){
+            p+=revString(word);
+        }
+        return p;
+    }
+    
+    static String revString(String m){
+        String r = "";
+        for(int l = m.length()-1; l>=0; l--){
+                    r+=m.charAt(l);
+        }
+        return r.trim();
+    }
+}
