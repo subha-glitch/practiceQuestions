@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+
+		String a = "hello";
+		for(int i = 1 ; i <a.length();i++){
+		    subStrings(a, i);
+		}
+	}
+	static void subStrings(String s, int size){
+	    for(int i =0 ; i <=s.length()-size; i++){
+	        String t = "";
+	        for(int j =i ; j <i+size; j++){
+	            t = t +s.charAt(j);
+	        }
+	        System.out.println(t);
+	    }
+	}
+}
